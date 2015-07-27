@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D2970FE3-2921-4671-8313-60A9BCFACCAA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CarRentalSystemApp</RootNamespace>
+    <AssemblyName>CarRentalSystemApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\CustomerDetailsBLL.cs" />
+    <Compile Include="BLL\LoginBll.cs" />
+    <Compile Include="BLL\RentalInformationBLL.cs" />
+    <Compile Include="DLL\DAO\Billing.cs" />
+    <Compile Include="DLL\DAO\BookingDetails.cs" />
+    <Compile Include="DLL\DAO\CustomerInformation.cs" />
+    <Compile Include="DLL\DAO\Login.cs" />
+    <Compile Include="BLL\VehicleBLL.cs" />
+    <Compile Include="DLL\DAO\RentalInformation.cs" />
+    <Compile Include="DLL\DAO\Vehicle.cs" />
+    <Compile Include="DLL\Gateway\CustomerDetailsGateway.cs" />
+    <Compile Include="DLL\Gateway\LoginGateway.cs" />
+    <Compile Include="DLL\Gateway\RentalInformationGateway.cs" />
+    <Compile Include="DLL\Gateway\VehicleGateway.cs" />
+    <Compile Include="UI\CustomersDetailsUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CustomersDetailsUI.Designer.cs">
+      <DependentUpon>CustomersDetailsUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LoginUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\LoginUI.Designer.cs">
+      <DependentUpon>LoginUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MainUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MainUI.Designer.cs">
+      <DependentUpon>MainUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RentalInformationUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\RentalInformationUI.Designer.cs">
+      <DependentUpon>RentalInformationUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RentalStatusUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\RentalStatusUI.Designer.cs">
+      <DependentUpon>RentalStatusUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\VehicleAddUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\VehicleAddUI.Designer.cs">
+      <DependentUpon>VehicleAddUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\VehicleDetailsUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\VehicleDetailsUI.Designer.cs">
+      <DependentUpon>VehicleDetailsUI.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\CustomersDetailsUI.resx">
+      <DependentUpon>CustomersDetailsUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LoginUI.resx">
+      <DependentUpon>LoginUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MainUI.resx">
+      <DependentUpon>MainUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\RentalInformationUI.resx">
+      <DependentUpon>RentalInformationUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\RentalStatusUI.resx">
+      <DependentUpon>RentalStatusUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\VehicleAddUI.resx">
+      <DependentUpon>VehicleAddUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\VehicleDetailsUI.resx">
+      <DependentUpon>VehicleDetailsUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Main Logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print Preview.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-print-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print-this-page-icon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-print-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Master Rent-A-Car Logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin_login.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3940585a2d442b4a263055de85b1318f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Customers_Icon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_view_details.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login-in-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-icon1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3940585a2d442b4a263055de85b1318f1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business_office_paper_print_printer_printing-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jrcgec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print-this-page-icon1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\script-icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
